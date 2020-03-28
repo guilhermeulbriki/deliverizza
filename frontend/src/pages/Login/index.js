@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 
 import "./style.css";
+import api from '../../services/api';
 
 export default function FormLogin() {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const response
+      const response = await api.post('session/user', {})
     } catch {
       alert('Falha no login, confira os campos e tente novamente.');
     }

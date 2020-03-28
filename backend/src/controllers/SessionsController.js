@@ -2,9 +2,10 @@ const connection = require('../database/connection');
 
 module.exports = {
   async userLogon(request, response) {
-    const { id } = request.body;
+    const { name } = request.body;
+
     const user = await connection('user')
-      .where('id', id)
+      .where('name', name)
       .select('name')
       .first();
 
@@ -16,9 +17,9 @@ module.exports = {
   },
 
   async pizzariaLogon(request, response) {
-    const { id } = request.body;
+    const { name } = request.body;
     const pizzaria = await connection('pizzaria')
-      .where('id', id)
+      .where('name', name)
       .select('name')
       .first();
 
