@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header';
 import Login from './pages/Login';
+import Orders from './pages/Orders';
 
 export default function Routes() {
   return (
@@ -12,6 +13,7 @@ export default function Routes() {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Login} />
+            <Route path="/orders" exact component={Orders} />
           </Switch>
         </BrowserRouter>
       </main>

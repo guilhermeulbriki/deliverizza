@@ -4,7 +4,7 @@ module.exports = {
   async index(request, response) {
     const { id } = request.params;
 
-    const user = await connection('user')
+    const [user] = await connection('user')
       .select('*')
       .where('id', id);
 

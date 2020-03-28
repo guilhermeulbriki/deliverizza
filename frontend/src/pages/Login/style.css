@@ -45,7 +45,7 @@ html {
   border: 2px solid #FF354E;
 }
 
-#login input.submit {
+#login button.submit {
   margin-top: 2vh;
   margin-bottom: 3vh;
   width: 180px;
@@ -63,7 +63,7 @@ html {
   transition: filter 0.2s;
 }
 
-#login input.submit:hover {
+#login button.submit:hover {
   filter: brightness(0.9);
 }
 

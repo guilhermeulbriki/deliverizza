@@ -2,13 +2,13 @@ const connection = require('../database/connection');
 
 module.exports = {
   async index(request, response) {
-    const user = request.headers.user;
+    const id = request.headers.id;
 
-    const order = await connection('order')
-      .where('user', user)
+    const orders = await connection('order')
+      .where('pizzaria_id', id)
       .select('*');
 
-    return response.json(order);
+    return response.json(orders);
   },
 
   async create(request, response) {

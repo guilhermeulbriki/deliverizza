@@ -6,7 +6,7 @@ module.exports = {
 
     const user = await connection('user')
       .where('name', name)
-      .select('name')
+      .select('*')
       .first();
 
     if (!user) {
@@ -20,7 +20,7 @@ module.exports = {
     const { name } = request.body;
     const pizzaria = await connection('pizzaria')
       .where('name', name)
-      .select('name')
+      .select('*')
       .first();
 
     if (!pizzaria) {

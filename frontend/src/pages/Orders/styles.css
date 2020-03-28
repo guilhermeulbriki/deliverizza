@@ -1,0 +1,136 @@
+.orders-container {
+  background-color: #f8f8f8;
+
+  height: 90%;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #585858;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.orders-container section {
+  height: 100%;
+  width: 50%;
+  padding: 10px;
+}
+
+/* LEFT */
+
+.orders-container .left {
+  display: grid;
+  grid-template-rows: 10% 10% 80%;
+}
+
+.orders-container .left .header {
+  width: 100%;
+  font-size: 1.3rem;
+  margin-left: 15px;
+}
+
+.orders-container .left .search {
+  width: 80%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  height: 30px;
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orders-container .left .search input {
+  width: 90%;
+  height: 30px;
+  padding-left: 10px;
+
+  background: none;
+  border: 0;
+
+  font-size: 1rem;
+}
+
+.orders-container .left ul {
+  list-style: none;
+  max-height: 100%;
+  overflow: scroll;
+  padding-right: 10px;
+}
+
+.orders-container .left ul li {
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.orders-container .left ul li.select {
+  border: 2px solid #FF354E;
+}
+
+.orders-container .left ul li + li {
+  margin-top: 10px;
+}
+
+.orders-container .left ul li span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orders-container .left ul li span h3 {
+  font-size: 1.2rem;
+}
+
+/* RIGHT */
+
+.orders-container .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orders-container .right .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 10%;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 10px;
+
+  background-color: #FF354E;
+}
+
+.orders-container .right .order {
+  height: 87%;
+  width: 100%;
+}
+
+.orders-container .right .order div {
+  height: 29%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.orders-container .right .order .snack {
+  padding-left: 20px;
+}
+
+.orders-container .right .order .snack h5 {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+.orders-container .right .order .value {
+  justify-content: flex-end;
+  padding-left: 30px;
+}
