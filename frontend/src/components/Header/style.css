@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Merienda&display=swap');
+
+html {
+  font-size: 100%;
+}
+
+header {
+  width: 100%;
+  background-color: rgba(27, 27, 27, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+header img {
+  height: 9vh;
+}
