@@ -2,7 +2,8 @@
 exports.up = function (knex) {
   return knex.schema.createTable('order', function (table) {
     table.increments();
-    table.string('user').notNullable();
+    table.string('user_id').notNullable();
+    table.string('user_name').notNullable();
     table.string('sizePizza').notNullable();
     table.string('flavorsPizza').notNullable();
     table.string('flavorEdge').notNullable();

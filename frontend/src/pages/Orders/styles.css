@@ -56,7 +56,7 @@
 .orders-container .left ul {
   list-style: none;
   max-height: 100%;
-  overflow: scroll;
+  overflow: auto;
   padding-right: 10px;
 }
 
@@ -87,7 +87,11 @@
 
 /* RIGHT */
 
-.orders-container .right {
+.orders-container .right.hidden {
+  display: none;
+}
+
+.orders-container .right.show {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,10 +114,11 @@
 .orders-container .right .order {
   height: 87%;
   width: 100%;
+  display: grid;
+  grid-template-rows: 40% 40% 20%;
 }
 
 .orders-container .right .order div {
-  height: 29%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -125,12 +130,17 @@
   padding-left: 20px;
 }
 
+.orders-container .right .order .snack section {
+  width: 100%;
+  height: 50%;
+  padding: 0;
+}
+
 .orders-container .right .order .snack h5 {
   margin-left: 15px;
   margin-top: 5px;
 }
 
 .orders-container .right .order .value {
-  justify-content: flex-end;
   padding-left: 30px;
 }

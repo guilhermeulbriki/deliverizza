@@ -1,0 +1,62 @@
+.register-container {
+  width: 90vw;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 15px;
+  padding: 10px 20px;
+
+  background-color: #f8f8f8;
+  box-shadow: 0 0 20px #e6e6e6;
+  color: #2e2e2e;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+.register-container .personal-informations .header {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 80%;
+}
+
+.register-container .personal-informations .header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1vh;
+}
+
+.register-container .personal-informations .content section {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.register-container .personal-informations .content section input {
+  height: 35px;
+  padding-left: 5px;
+  width: 180px;
+  background: none;
+
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+  font-size: 1rem;
+}
+
+.register-container .personal-informations .content section.name input {
+  width: 240px;
+}
+
+hr {
+  margin: 10px 0;
+  border-color: 1px solid #2e2e2e;
+}

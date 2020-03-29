@@ -45,8 +45,8 @@ export default function FormLogin() {
         className="submit btn-submit"
         type="submit"
       >Login</button>
-      <Link to="/senha" name="senha" >Esqueci minha senha</Link>
-      <Link to="/cadastro" className="cadastro" >Cadastrar-se</Link>
+      {/* <Link to="/senha" name="senha" >Esqueci minha senha</Link> */}
+      <Link to="/register" className="cadastro" >Cadastrar-se</Link>
     </form >
   );
 }

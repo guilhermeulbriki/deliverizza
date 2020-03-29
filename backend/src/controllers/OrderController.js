@@ -13,7 +13,8 @@ module.exports = {
 
   async create(request, response) {
     const pizzaria_id = request.headers.pizzaria;
-    const user = request.headers.user;
+    const user_id = request.headers.user_id;
+    const user_name = request.headers.user_name;
     const did = false;
 
     const {
@@ -27,7 +28,8 @@ module.exports = {
 
     await connection('order')
       .insert({
-        user,
+        user_id,
+        user_name,
         sizePizza,
         flavorsPizza: JSON.stringify(flavorsPizza),
         flavorEdge: JSON.stringify(flavorEdge),
