@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link, useHistory } from 'react-router-dom';
+import { FiMail, FiLock } from 'react-icons/fi';
 
-import "./style.css";
 import api from '../../services/api';
+
+import Input from '../../components/InputForm';
+import { Container } from './style';
 
 export default function FormLogin() {
   const [name, setName] = useState("");
@@ -13,6 +16,7 @@ export default function FormLogin() {
     e.preventDefault();
     try {
       const response = await api.post('session/pizzaria', { name });
+
       localStorage.setItem('pizzariaName', name);
       localStorage.setItem('pizzariaID', response.data.id);
       history.push('/orders');
@@ -22,31 +26,31 @@ export default function FormLogin() {
   }
 
   return (
-    <form onSubmit={handleSubmit} id="login" >
-      <input
-        className="login"
-        name="nome"
-        type="text"
-        placeholder="login"
-        required
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
-      <input
-        className="login"
-        name="senha"
-        type="password"
-        placeholder="password"
-        required
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-      />
-      <button
-        className="submit btn-submit"
-        type="submit"
-      >Login</button>
-      {/* <Link to="/senha" name="senha" >Esqueci minha senha</Link> */}
-      <Link to="/register" className="cadastro" >Cadastrar-se</Link>
-    </form >
+    <Container>
+      <form onSubmit={handleSubmit}>
+        <Input
+          icon={FiMail}
+          type="text"
+          placeholder="Email"
+          required
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+        <Input
+          icon={FiLock}
+          type="password"
+          placeholder="Senha"
+          required
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+        />
+        <button
+          className="submit btn-submit"
+          type="submit"
+        >Login</button>
+        <Link to="/senha" className="senha" >Esqueci minha senha</Link>
+        <Link to="/register" className="cadastro" >Cadastrar-se</Link>
+      </form>
+    </Container>
   );
 }

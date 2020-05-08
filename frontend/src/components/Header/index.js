@@ -1,12 +1,13 @@
 import React from "react";
 
-import "./style.css";
-import logoImg from '../../assets/images/logo.png';
+import DeliveriLogo from '../../assets/images/logo-deliverizza.svg';
+
+import { HeaderContainer } from './style';
 
 export default function Header() {
   return (
-    <header>
-      <img src={logoImg} alt="Deliveizza" />
-    </header>
+    <HeaderContainer>
+      <img src={DeliveriLogo} alt="Deliveizza" />
+    </HeaderContainer>
   );
 }
